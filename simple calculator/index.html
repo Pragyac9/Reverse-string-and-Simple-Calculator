@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+
+    <style>
+        body {
+            background: url(https://i.pinimg.com/originals/8a/12/2b/8a122bc8012d08921fb02b4cf3a0fbfe.jpg);
+        }
+
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid grey;
+            width: 30%;
+            text-align: center;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+
+
+        }
+
+        button {
+            border: none;
+            color: #fff;
+            background-image: linear-gradient(30deg, #c3c3f4, #404444);
+            border-radius: 20px;
+            background-size: 100% auto;
+            font-family: inherit;
+            font-size: 17px;
+            padding: 0.6em 1.5em;
+        }
+
+        button:hover {
+            background-position: right center;
+            background-size: 200% auto;
+            -webkit-animation: pulse 2s infinite;
+            animation: pulse512 1.5s infinite;
+        }
+
+        @keyframes pulse512 {
+            0% {
+                box-shadow: 0 0 0 0 #08101166;
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <h2>Simple calculator</h2>
+        <label for="operator">Choose an operation:</label>
+        <select id="operator">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select>
+        <br><br>
+        <label for="num1">First Number:</label>
+        <input type="number" id="num1">
+        <br><br>
+        <label for="num2">Second Number:</label>
+        <input type="number" id="num2">
+        <br><br>
+        <button onclick="calculate()">Calculate</button>
+        <br><br>
+        <p id="result">Result: </p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
